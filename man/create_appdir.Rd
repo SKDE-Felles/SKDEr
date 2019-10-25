@@ -12,6 +12,10 @@ create_appdir(app_data = NULL, webpage_title = NULL, package = NULL,
 
 \item{webpage_title}{The title of the app}
 
+\item{package}{Package name containing a shiny app in <app_folder>}
+
+\item{app_folder}{The folder name where the shiny app is located.}
+
 \item{git_hash}{Current git sha1 hash}
 
 \item{github_repo}{Current github repository}

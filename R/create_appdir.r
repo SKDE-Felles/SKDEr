@@ -8,6 +8,8 @@
 #' @param webpage_title The title of the app
 #' @param git_hash Current git sha1 hash
 #' @param github_repo Current github repository
+#' @param package Package name containing a shiny app in <app_folder>
+#' @param app_folder The folder name where the shiny app is located.
 #'
 #' @return The created directory
 #' @export
