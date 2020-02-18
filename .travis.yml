@@ -1,5 +1,6 @@
 language: r
 cache: packages
+os: linux
 
 jobs:
   include:
@@ -53,8 +54,8 @@ after_success:
 
 deploy:
   provider: pages                         # Specify the gh-pages deployment method
-  skip_cleanup: true                      # Don't remove files
-  github_token: $GITHUB_TOKEN             # Set in travis-ci.org dashboard
+  cleanup: false                          # Don't remove files
+  token: $GITHUB_TOKEN                    # Set in travis-ci.org dashboard
   local_dir: docs                         # Deploy the docs folder
   on:
     branch: master
