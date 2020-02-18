@@ -1,9 +1,7 @@
 language: r
-sudo: false
 cache: packages
-warnings_are_errors: true
 
-matrix:
+jobs:
   include:
     - os: linux
       dist: xenial
@@ -60,8 +58,7 @@ deploy:
   local_dir: docs                         # Deploy the docs folder
   on:
     branch: master
-    condition: "$AFTER_JOBS = true"
-    type: push
+    condition: "$AFTER_JOBS = true AND $TRAVIS_EVENT_TYPE = push"
 
 notifications:
   email:
